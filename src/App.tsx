@@ -49,7 +49,9 @@ function App() {
         setShowPagination={setShowPagination}
         disabledButton={disabledButton}
       />
-      <PokemonModal setModal={setModal} pokemonData={pokemonData} />
+      {pokemonData && modal && (
+        <PokemonModal setModal={setModal} pokemonData={pokemonData} />
+      )}
       {/* <Pagination
         setPokemonList={setPokemonList}
         setLoading={setLoading}

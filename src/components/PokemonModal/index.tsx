@@ -1,5 +1,5 @@
 import { Pokemon } from "../../types";
-
+import "./styles.scss";
 type PokemonModalProps = {
   setModal: (value: boolean) => void;
   pokemonData: Pokemon;
