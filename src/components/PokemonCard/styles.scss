@@ -44,7 +44,6 @@
     display: block;
     width: 12.5rem;
     height: 12.5rem;
-    // background: ${(props) => props.color}; elle ekleyecegiz on tarafta
     filter: blur(128px);
     position: absolute;
     top: 0;
@@ -57,6 +56,10 @@
 .pokemon-card-image {
   position: absolute;
   top: -10.5rem;
+  img {
+    width: 256px;
+    height: 256px;
+  }
 }
 
 .pokemon-card-number {
@@ -95,7 +98,9 @@
   }
 }
 
-.pokemon-card-weight {
+.pokemon-card-weight,
+.pokemon-card-height {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,5 +119,24 @@
     font-size: 1rem;
     line-height: 150%;
     font-weight: 400;
+  }
+}
+
+.pokemon-card-button {
+  width: calc(100% + 2px);
+  height: 3rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 700;
+  color: #ffffff;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
