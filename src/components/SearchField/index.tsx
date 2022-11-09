@@ -30,6 +30,7 @@ const Index = (props: SearchFieldProps) => {
       <input
         type="text"
         value={inputValue}
+        placeholder="Search for a pokemon"
         onChange={(e) => setInputValue(e.target.value)}
       />
     </form>

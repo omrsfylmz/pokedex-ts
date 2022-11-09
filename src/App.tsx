@@ -5,6 +5,8 @@ import Pokedex from "./components/Pokedex";
 import Pagination from "./components/Pagination";
 import SearchField from "./components/SearchField";
 import PokemonModal from "./components/PokemonModal";
+import LinearProgressWithLabel from "./components/ProgressLine";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -28,10 +30,16 @@ function App() {
 
   return (
     <div>
-      <SearchField
+      <SearchBar
         setPokemonList={setPokemonList}
+        pokemonAmount={pokemonAmount}
+        setPokemonAmount={setPokemonAmount}
         setError={setError}
         setLoading={setLoading}
+        setPage={setPage}
+        setShowPagination={setShowPagination}
+        disabledButton={disabledButton}
+        setDisabledButton={setDisabledButton}
       />
       <Pokedex
         setModal={setModal}
