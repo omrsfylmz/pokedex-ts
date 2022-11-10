@@ -2,6 +2,7 @@ import "./styles.scss";
 import { Pokemon } from "../../types";
 import PokemonCard from "../PokemonCard";
 import Pagination from "../Pagination";
+import { Loading } from "../Loading";
 
 type PokedexProps = {
   setModal: (value: boolean) => void;
@@ -25,7 +26,9 @@ const index = (props: PokedexProps) => {
     <div className="pokedex-wrapper">
       <div className="main-container">
         {props.loading ? (
-          <div>Loading...</div>
+          <div>
+            <Loading />
+          </div>
         ) : (
           <div className="pokemon-list">
             {props.pokemonList.map((pokemon) => (
