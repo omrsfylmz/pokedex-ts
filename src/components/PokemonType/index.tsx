@@ -1,6 +1,7 @@
 import { SyntheticEvent } from "react";
 import { pokemonTypes } from "../../colors";
 import Icon from "../Icon";
+import * as C from "./styles";
 
 import "./styles.scss";
 
@@ -17,8 +18,7 @@ export const PokemonType = (props: PokemonTypeProps) => {
 
   console.log(name);
   return name && color ? (
-    <button
-      className={`bg-${name} type`}
+    <C.Button
       color={color}
       value={name}
       onClick={props.handleClick}
@@ -26,7 +26,7 @@ export const PokemonType = (props: PokemonTypeProps) => {
     >
       <Icon icon={name} size={20} />
       {name}
-    </button>
+    </C.Button>
   ) : (
     <span className="error">
       Ops, something went wrong. Please, try again later.

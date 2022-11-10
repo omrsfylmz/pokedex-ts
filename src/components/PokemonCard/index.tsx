@@ -1,4 +1,5 @@
 import "./styles.scss";
+import * as C from "./styles";
 import { Pokemon } from "../../types";
 import { fetchPokemon } from "../../service/fetchPokemon";
 import { PokemonType } from "../PokemonType";
@@ -31,7 +32,7 @@ const index = ({ pokemon, setModal, setPokemonData }: PokemonCardProps) => {
 
   return (
     <div className="pokemon-card-container">
-      <div className={`pokemon-card-overlay after:bg-${name}`} />
+      <C.CardOverlay color={color} />
       <div className="pokemon-card-image">
         <img src={imgUrl} />
       </div>
@@ -54,12 +55,9 @@ const index = ({ pokemon, setModal, setPokemonData }: PokemonCardProps) => {
           {pokemon.height} m
         </div>
       </div>
-      <button
-        className={`pokemon-card-button bg-${name}`}
-        onClick={handleClick}
-      >
-        more details
-      </button>
+      <C.MoreDetailsButton color={color} onClick={handleClick}>
+        Mais Detalhes
+      </C.MoreDetailsButton>
     </div>
   );
 };

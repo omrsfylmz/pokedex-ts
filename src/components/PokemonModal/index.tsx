@@ -1,9 +1,11 @@
 import React from "react";
 import { Pokemon } from "../../types";
+import { CardOverlay } from "./style";
 import Icon from "../Icon";
 import { PokemonType } from "../PokemonType";
 import LinearProgressWithLabel from "../ProgressLine";
 import "./styles.scss";
+import { pokemonTypes } from "../../colors";
 type PokemonModalProps = {
   setModal: (value: boolean) => void;
   pokemonData: Pokemon;
@@ -12,9 +14,9 @@ type PokemonModalProps = {
 const index = ({ setModal, pokemonData }: PokemonModalProps) => {
   const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonData?.id}.png`;
 
-  //   const [{ color }] = pokemonTypes.filter(
-  //     (type) => pokemonData.types[0].type.name.indexOf(type.name) !== -1
-  //   );
+  const [{ color }] = pokemonTypes.filter(
+    (type) => pokemonData.types[0].type.name.indexOf(type.name) !== -1
+  );
 
   const formatStatName = (statName: string) => {
     switch (statName) {
@@ -47,7 +49,7 @@ const index = ({ setModal, pokemonData }: PokemonModalProps) => {
     >
       <div className="pokemon-modal-container">
         <div className="pokemon-modal-data">
-          <div className="pokemon-modal-overlay" />
+          <CardOverlay color={color} />
           <div className="pokemon-modal-image">
             <img src={imgUrl} />
           </div>
