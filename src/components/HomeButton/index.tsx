@@ -29,8 +29,8 @@ const index = (props: HomeButtonProps) => {
       onClick={handleClick}
       disabled={props.disabledButton ? true : false}
     >
-      <Icon size={20} icon="fire" />
-      Início
+      <Icon size={40} icon="normal" />
+      Home
     </button>
   );
 };

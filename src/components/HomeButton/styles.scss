@@ -1,14 +1,20 @@
 .home-button {
   grid-area: HomeButton;
   justify-self: start;
+  align-self: center;
 
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  &[disabled] {
-    opacity: 0.5;
-    cursor: wait;
-  }
+  background: linear-gradient(rgb(21, 26, 55) 0%, rgba(21, 26, 55, 0) 100%);
+  border: 1px solid rgb(36, 41, 63);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
 }
