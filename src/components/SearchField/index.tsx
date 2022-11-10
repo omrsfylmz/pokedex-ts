@@ -1,6 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import { fetchPokemon } from "../../service/fetchPokemon";
 import { Pokemon } from "../../types";
+import Icon from "../Icon";
 import "./styles.scss";
 
 type SearchFieldProps = {
@@ -33,6 +34,9 @@ const Index = (props: SearchFieldProps) => {
         placeholder="Search for a pokemon"
         onChange={(e) => setInputValue(e.target.value)}
       />
+      <button className="search-field-button">
+        <Icon size={20} icon="search" />
+      </button>
     </form>
   );
 };

@@ -40,12 +40,14 @@ const index = (props: PokedexProps) => {
         )}
       </div>
       <div className="flex items-center w-full justify-center">
-        <Pagination
-          setPokemonList={props.setPokemonList}
-          setLoading={props.setLoading}
-          page={props.page}
-          setPage={props.setPage}
-        />
+        {props.pokemonList.length > 1 && props.loading === false && (
+          <Pagination
+            setPokemonList={props.setPokemonList}
+            setLoading={props.setLoading}
+            page={props.page}
+            setPage={props.setPage}
+          />
+        )}
       </div>
     </div>
   );

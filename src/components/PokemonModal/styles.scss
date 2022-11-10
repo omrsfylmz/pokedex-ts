@@ -116,6 +116,7 @@
   font-size: 1.25rem;
   line-height: 135%;
   font-weight: 700;
+  color: #fff;
 }
 
 .pokemon-modal-pokemon-type {
@@ -135,6 +136,7 @@
   text-align: center;
   display: block;
   margin: 0.25rem 0.5rem 0.75rem;
+  color: #fff;
 }
 
 .pokemon-modal-pokemon-features {
@@ -227,13 +229,14 @@
   font-weight: 400;
   display: block;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .pokemon-modal-stats-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
+  color: #fff;
   span {
     font-size: 1rem;
     line-height: 1;

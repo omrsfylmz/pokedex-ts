@@ -41,7 +41,9 @@ const index = ({ setModal, pokemonData }: PokemonModalProps) => {
   return (
     <div
       className="pokemon-modal-wrapper"
-      onClick={(e) => e.target === e.currentTarget && setModal(false)}
+      onClick={(e: { target: any; currentTarget: any }) =>
+        e.target === e.currentTarget && setModal(false)
+      }
     >
       <div className="pokemon-modal-container">
         <div className="pokemon-modal-data">

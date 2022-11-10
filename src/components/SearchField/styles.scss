@@ -1,8 +1,7 @@
 .search-field-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
+  grid-area: SearchField;
+  justify-self: end;
+  width: 30.5rem;
   height: 3.5rem;
   display: flex;
   border-radius: 0.5rem;
@@ -18,10 +17,8 @@
 }
 
 input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
+  background: none;
   border: 0.13rem solid #2f5aff;
   border-radius: 0.5rem 0 0 0.5rem;
   padding: 1rem;
@@ -29,10 +26,23 @@ input {
   font-size: 1rem;
   line-height: 150%;
   font-weight: 400;
-  color: black;
+  color: #ffffff;
   outline: none;
 
-  // &::placeholder {
-  //   color: rgba(255, 255, 255, 0.25);
-  // }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.search-field-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #2f5aff;
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  svg {
+    color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
