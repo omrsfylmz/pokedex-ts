@@ -1,6 +1,7 @@
 import usePagination from "@mui/material/usePagination";
 import { fetchPokemonList } from "../../service/fetchPokemonList";
 import { Pokemon } from "../../types";
+import Icon from "../Icon";
 import "./styles.scss";
 
 type UsePaginationProps = {
@@ -50,7 +51,11 @@ const Index = (props: UsePaginationProps) => {
           } else {
             children = (
               <button type="button" {...item} className="button">
-                {type}
+                {type === "previous" ? (
+                  <Icon icon="left" size={30} />
+                ) : (
+                  <Icon icon="right" size={30} />
+                )}
               </button>
             );
           }
