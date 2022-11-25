@@ -46,4 +46,10 @@ input {
     width: 1.5rem;
     height: 1.5rem;
   }
+  &:hover {
+    cursor: pointer;
+    svg {
+      scale: 1.1;
+    }
+  }
 }
