@@ -16,7 +16,6 @@ export const PokemonType = (props: PokemonTypeProps) => {
     (item) => item.name === props.type
   );
 
-  console.log(name);
   return name && color ? (
     <C.Button
       color={color}
