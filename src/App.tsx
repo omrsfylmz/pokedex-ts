@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Pokemon } from "./types";
 import { fetchPokemonList } from "./service/fetchPokemonList";
 import Pokedex from "./components/Pokedex";
-import Pagination from "./components/Pagination";
-import SearchField from "./components/SearchField";
 import PokemonModal from "./components/PokemonModal";
-import LinearProgressWithLabel from "./components/ProgressLine";
 import SearchBar from "./components/SearchBar";
 
 function App() {
