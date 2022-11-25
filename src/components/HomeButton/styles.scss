@@ -17,4 +17,9 @@
   line-height: 150%;
   font-weight: 700;
   color: rgb(255, 255, 255);
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(36, 41, 63) 0%, rgba(36, 41, 63, 0) 100%);
+  }
 }
