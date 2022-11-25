@@ -4,6 +4,7 @@ import { fetchPokemonList } from "./service/fetchPokemonList";
 import Pokedex from "./components/Pokedex";
 import PokemonModal from "./components/PokemonModal";
 import SearchBar from "./components/SearchBar";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -15,7 +16,6 @@ function App() {
   const [page, setPage] = useState(1);
   const [showPagination, setShowPagination] = useState(true);
   const [disabledButton, setDisabledButton] = useState(false);
-  const searchBarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -38,22 +38,27 @@ function App() {
         disabledButton={disabledButton}
         setDisabledButton={setDisabledButton}
       />
-      <Pokedex
-        setModal={setModal}
-        setPokemonData={setPokemonData}
-        pokemonList={pokemonList}
-        setPokemonList={setPokemonList}
-        pokemonAmount={pokemonAmount}
-        setPokemonAmount={setPokemonAmount}
-        error={error}
-        loading={loading}
-        setLoading={setLoading}
-        page={page}
-        setPage={setPage}
-        showPagination={showPagination}
-        setShowPagination={setShowPagination}
-        disabledButton={disabledButton}
-      />
+      {error ? (
+        <ErrorMessage />
+      ) : (
+        <Pokedex
+          setModal={setModal}
+          setPokemonData={setPokemonData}
+          pokemonList={pokemonList}
+          setPokemonList={setPokemonList}
+          pokemonAmount={pokemonAmount}
+          setPokemonAmount={setPokemonAmount}
+          error={error}
+          loading={loading}
+          setLoading={setLoading}
+          page={page}
+          setPage={setPage}
+          showPagination={showPagination}
+          setShowPagination={setShowPagination}
+          disabledButton={disabledButton}
+        />
+      )}
+
       {pokemonData && modal && (
         <PokemonModal setModal={setModal} pokemonData={pokemonData} />
       )}

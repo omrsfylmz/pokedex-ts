@@ -24,6 +24,7 @@ const index = (props: SearchBarProps) => {
         setShowPagination={props.setShowPagination}
         disabledButton={props.disabledButton}
         setDisabledButton={props.setDisabledButton}
+        setError={props.setError}
       />
       <SearchField
         setPokemonList={props.setPokemonList}

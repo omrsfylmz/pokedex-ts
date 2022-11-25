@@ -10,6 +10,7 @@ type HomeButtonProps = {
   setShowPagination: (value: boolean) => void;
   disabledButton: boolean;
   setDisabledButton: (value: boolean) => void;
+  setError: (value: boolean) => void;
 };
 
 const index = (props: HomeButtonProps) => {
@@ -21,6 +22,7 @@ const index = (props: HomeButtonProps) => {
     props.setDisabledButton(false);
     props.setPage(1);
     props.setShowPagination(true);
+    props.setError(false);
   };
 
   return (
