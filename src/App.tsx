@@ -60,12 +60,6 @@ function App() {
       {pokemonData && modal && (
         <PokemonModal setModal={setModal} pokemonData={pokemonData} />
       )}
-      {/* <Pagination
-        setPokemonList={setPokemonList}
-        setLoading={setLoading}
-        page={page}
-        setPage={setPage}
-      /> */}
     </div>
   );
 }
